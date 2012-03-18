@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/820/branches/experimental/src/common/database
+END
+dbcore.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/820/branches/experimental/src/common/database/dbcore.cpp
+END
+dbtype.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/806/branches/experimental/src/common/database/dbtype.cpp
+END

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/806/branches/experimental/src/eve-server/manufacturing
+END
+RamProxyService.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/806/branches/experimental/src/eve-server/manufacturing/RamProxyService.cpp
+END
+Blueprint.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/806/branches/experimental/src/eve-server/manufacturing/Blueprint.cpp
+END
+RamProxyDB.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/806/branches/experimental/src/eve-server/manufacturing/RamProxyDB.cpp
+END
+FactoryService.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/806/branches/experimental/src/eve-server/manufacturing/FactoryService.cpp
+END
+FactoryDB.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/806/branches/experimental/src/eve-server/manufacturing/FactoryDB.cpp
+END

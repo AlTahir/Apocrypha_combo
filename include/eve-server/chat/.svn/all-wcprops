@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/806/branches/experimental/include/eve-server/chat
+END
+OnlineStatusService.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/806/branches/experimental/include/eve-server/chat/OnlineStatusService.h
+END
+LSCChannel.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/806/branches/experimental/include/eve-server/chat/LSCChannel.h
+END
+LookupService.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/806/branches/experimental/include/eve-server/chat/LookupService.h
+END
+VoiceMgrService.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/806/branches/experimental/include/eve-server/chat/VoiceMgrService.h
+END
+LSCService.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/806/branches/experimental/include/eve-server/chat/LSCService.h
+END
+LSCDB.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/806/branches/experimental/include/eve-server/chat/LSCDB.h
+END

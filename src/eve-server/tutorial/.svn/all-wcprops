@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/806/branches/experimental/src/eve-server/tutorial
+END
+TutorialService.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/806/branches/experimental/src/eve-server/tutorial/TutorialService.cpp
+END
+TutorialDB.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/806/branches/experimental/src/eve-server/tutorial/TutorialDB.cpp
+END

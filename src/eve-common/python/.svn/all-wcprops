@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/806/branches/experimental/src/eve-common/python
+END
+PyDumpVisitor.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/806/branches/experimental/src/eve-common/python/PyDumpVisitor.cpp
+END
+PyRep.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/806/branches/experimental/src/eve-common/python/PyRep.cpp
+END
+PyPacket.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/806/branches/experimental/src/eve-common/python/PyPacket.cpp
+END
+PyXMLGenerator.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/806/branches/experimental/src/eve-common/python/PyXMLGenerator.cpp
+END
+PyLookupDump.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/806/branches/experimental/src/eve-common/python/PyLookupDump.cpp
+END
+PyVisitor.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/806/branches/experimental/src/eve-common/python/PyVisitor.cpp
+END

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/!svn/ver/819/branches/experimental/src/eve-tool
+END
+Commands.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/819/branches/experimental/src/eve-tool/Commands.cpp
+END
+main.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/819/branches/experimental/src/eve-tool/main.cpp
+END
+.svn.ignore
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/806/branches/experimental/src/eve-tool/.svn.ignore
+END
+obj2sqlAll.et
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/806/branches/experimental/src/eve-tool/obj2sqlAll.et
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/819/branches/experimental/src/eve-tool/CMakeLists.txt
+END

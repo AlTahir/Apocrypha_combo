@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/814/branches/experimental/include/eve-server/inventory
+END
+AttributeMgr.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/806/branches/experimental/include/eve-server/inventory/AttributeMgr.h
+END
+EVEAttributeMgr.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/806/branches/experimental/include/eve-server/inventory/EVEAttributeMgr.h
+END
+Owner.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/806/branches/experimental/include/eve-server/inventory/Owner.h
+END
+ItemRef.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/806/branches/experimental/include/eve-server/inventory/ItemRef.h
+END
+InventoryItem.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/806/branches/experimental/include/eve-server/inventory/InventoryItem.h
+END
+Inventory.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/806/branches/experimental/include/eve-server/inventory/Inventory.h
+END
+ItemType.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/806/branches/experimental/include/eve-server/inventory/ItemType.h
+END
+InvBrokerService.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/806/branches/experimental/include/eve-server/inventory/InvBrokerService.h
+END
+InventoryDB.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/814/branches/experimental/include/eve-server/inventory/InventoryDB.h
+END
+ItemDB.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/806/branches/experimental/include/eve-server/inventory/ItemDB.h
+END
+InventoryBound.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/806/branches/experimental/include/eve-server/inventory/InventoryBound.h
+END
+EVEAttributes.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/806/branches/experimental/include/eve-server/inventory/EVEAttributes.h
+END
+ItemFactory.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/806/branches/experimental/include/eve-server/inventory/ItemFactory.h
+END

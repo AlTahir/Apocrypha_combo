@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/806/branches/experimental/include/eve-server/config
+END
+ConfigDB.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/806/branches/experimental/include/eve-server/config/ConfigDB.h
+END
+LanguageService.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/806/branches/experimental/include/eve-server/config/LanguageService.h
+END
+ConfigService.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/806/branches/experimental/include/eve-server/config/ConfigService.h
+END

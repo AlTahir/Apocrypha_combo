@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/820/branches/experimental/src/eve-server/system
+END
+Damage.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/820/branches/experimental/src/eve-server/system/Damage.cpp
+END
+SystemManager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/806/branches/experimental/src/eve-server/system/SystemManager.cpp
+END
+DungeonService.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/806/branches/experimental/src/eve-server/system/DungeonService.cpp
+END
+SystemBubble.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/806/branches/experimental/src/eve-server/system/SystemBubble.cpp
+END
+SystemEntity.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/820/branches/experimental/src/eve-server/system/SystemEntity.cpp
+END
+ScenarioService.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/806/branches/experimental/src/eve-server/system/ScenarioService.cpp
+END
+Celestial.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/806/branches/experimental/src/eve-server/system/Celestial.cpp
+END
+SolarSystem.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/806/branches/experimental/src/eve-server/system/SolarSystem.cpp
+END
+BookmarkService.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/806/branches/experimental/src/eve-server/system/BookmarkService.cpp
+END
+BubbleManager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/806/branches/experimental/src/eve-server/system/BubbleManager.cpp
+END
+SystemEntities.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/806/branches/experimental/src/eve-server/system/SystemEntities.cpp
+END
+SystemDB.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/820/branches/experimental/src/eve-server/system/SystemDB.cpp
+END
+BookmarkDB.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/806/branches/experimental/src/eve-server/system/BookmarkDB.cpp
+END
+KeeperService.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/806/branches/experimental/src/eve-server/system/KeeperService.cpp
+END

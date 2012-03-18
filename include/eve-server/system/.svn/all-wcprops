@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/820/branches/experimental/include/eve-server/system
+END
+SystemEntities.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/806/branches/experimental/include/eve-server/system/SystemEntities.h
+END
+SystemDB.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/820/branches/experimental/include/eve-server/system/SystemDB.h
+END
+BookmarkDB.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/806/branches/experimental/include/eve-server/system/BookmarkDB.h
+END
+KeeperService.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/806/branches/experimental/include/eve-server/system/KeeperService.h
+END
+Damage.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/811/branches/experimental/include/eve-server/system/Damage.h
+END
+SystemManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/806/branches/experimental/include/eve-server/system/SystemManager.h
+END
+DungeonService.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/806/branches/experimental/include/eve-server/system/DungeonService.h
+END
+SystemBubble.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/806/branches/experimental/include/eve-server/system/SystemBubble.h
+END
+SystemEntity.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/820/branches/experimental/include/eve-server/system/SystemEntity.h
+END
+ScenarioService.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/806/branches/experimental/include/eve-server/system/ScenarioService.h
+END
+Celestial.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/806/branches/experimental/include/eve-server/system/Celestial.h
+END
+SolarSystem.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/806/branches/experimental/include/eve-server/system/SolarSystem.h
+END
+BookmarkService.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/806/branches/experimental/include/eve-server/system/BookmarkService.h
+END
+BubbleManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/806/branches/experimental/include/eve-server/system/BubbleManager.h
+END

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/!svn/ver/806/branches/experimental/dep/utils
+END
+TriFile.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/806/branches/experimental/dep/utils/TriFile.cpp
+END
+TriFile.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/806/branches/experimental/dep/utils/TriFile.h
+END
+Base64.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/806/branches/experimental/dep/utils/Base64.cpp
+END
+Base64.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/806/branches/experimental/dep/utils/Base64.h
+END

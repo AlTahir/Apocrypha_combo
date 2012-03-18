@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/806/branches/experimental/include/eve-server/missions
+END
+Agent.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/806/branches/experimental/include/eve-server/missions/Agent.h
+END
+AgentMgrService.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/806/branches/experimental/include/eve-server/missions/AgentMgrService.h
+END
+MissionDB.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/806/branches/experimental/include/eve-server/missions/MissionDB.h
+END
+MissionMgrService.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/806/branches/experimental/include/eve-server/missions/MissionMgrService.h
+END

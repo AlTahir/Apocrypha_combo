@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/806/branches/experimental/src/eve-server/account
+END
+UserService.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/806/branches/experimental/src/eve-server/account/UserService.cpp
+END
+ClientStatMgrService.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/806/branches/experimental/src/eve-server/account/ClientStatMgrService.cpp
+END
+AccountDB.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/806/branches/experimental/src/eve-server/account/AccountDB.cpp
+END
+AuthService.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/806/branches/experimental/src/eve-server/account/AuthService.cpp
+END
+AccountService.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/806/branches/experimental/src/eve-server/account/AccountService.cpp
+END

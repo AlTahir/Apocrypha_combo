@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/806/branches/experimental/src/eve-collector
+END
+EVEHandlers.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/806/branches/experimental/src/eve-collector/EVEHandlers.cpp
+END
+.svn.ignore
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/806/branches/experimental/src/eve-collector/.svn.ignore
+END
+EVECollectDisp.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/806/branches/experimental/src/eve-collector/EVECollectDisp.cpp
+END
+evecollector.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/806/branches/experimental/src/eve-collector/evecollector.cpp
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/806/branches/experimental/src/eve-collector/CMakeLists.txt
+END
+DestinyHandler.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/806/branches/experimental/src/eve-collector/DestinyHandler.cpp
+END
+EVEnids.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/806/branches/experimental/src/eve-collector/EVEnids.cpp
+END

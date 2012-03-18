@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/806/branches/experimental/include/eve-server/posmgr
+END
+PosMgrDB.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/806/branches/experimental/include/eve-server/posmgr/PosMgrDB.h
+END
+PosMgrService.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/806/branches/experimental/include/eve-server/posmgr/PosMgrService.h
+END

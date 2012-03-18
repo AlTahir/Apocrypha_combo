@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/820/branches/experimental/src/eve-server/admin
+END
+PetitionerService.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/806/branches/experimental/src/eve-server/admin/PetitionerService.cpp
+END
+CommandDB.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/806/branches/experimental/src/eve-server/admin/CommandDB.cpp
+END
+CommandDispatcher.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/806/branches/experimental/src/eve-server/admin/CommandDispatcher.cpp
+END
+GMCommands.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/820/branches/experimental/src/eve-server/admin/GMCommands.cpp
+END
+AlertService.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/806/branches/experimental/src/eve-server/admin/AlertService.cpp
+END
+AllCommands.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/806/branches/experimental/src/eve-server/admin/AllCommands.cpp
+END
+SlashService.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/806/branches/experimental/src/eve-server/admin/SlashService.cpp
+END

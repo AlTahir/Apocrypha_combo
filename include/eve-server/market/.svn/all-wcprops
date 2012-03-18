@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/806/branches/experimental/include/eve-server/market
+END
+BillMgrService.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/806/branches/experimental/include/eve-server/market/BillMgrService.h
+END
+MarketDB.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/806/branches/experimental/include/eve-server/market/MarketDB.h
+END
+ContractMgrService.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/806/branches/experimental/include/eve-server/market/ContractMgrService.h
+END
+MarketProxyService.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/806/branches/experimental/include/eve-server/market/MarketProxyService.h
+END

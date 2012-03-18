@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/820/branches/experimental/include/eve-server/admin
+END
+AllCommands.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/806/branches/experimental/include/eve-server/admin/AllCommands.h
+END
+SlashService.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/806/branches/experimental/include/eve-server/admin/SlashService.h
+END
+PetitionerService.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/806/branches/experimental/include/eve-server/admin/PetitionerService.h
+END
+CommandDB.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/806/branches/experimental/include/eve-server/admin/CommandDB.h
+END
+CommandDispatcher.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/806/branches/experimental/include/eve-server/admin/CommandDispatcher.h
+END
+GMCommands.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/820/branches/experimental/include/eve-server/admin/GMCommands.h
+END
+AllCommandsList.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/806/branches/experimental/include/eve-server/admin/AllCommandsList.h
+END
+AlertService.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/806/branches/experimental/include/eve-server/admin/AlertService.h
+END

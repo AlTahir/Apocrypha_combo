@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/820/branches/experimental/include/eve-server/character
+END
+CertificateMgrService.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/806/branches/experimental/include/eve-server/character/CertificateMgrService.h
+END
+Character.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/820/branches/experimental/include/eve-server/character/Character.h
+END
+CharacterService.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/806/branches/experimental/include/eve-server/character/CharacterService.h
+END
+CertificateMgrDB.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/806/branches/experimental/include/eve-server/character/CertificateMgrDB.h
+END
+Skill.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/810/branches/experimental/include/eve-server/character/Skill.h
+END
+CharacterAppearance_fields.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/806/branches/experimental/include/eve-server/character/CharacterAppearance_fields.h
+END
+CharacterDB.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/806/branches/experimental/include/eve-server/character/CharacterDB.h
+END
+CharMgrService.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/806/branches/experimental/include/eve-server/character/CharMgrService.h
+END
+SkillMgrService.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/806/branches/experimental/include/eve-server/character/SkillMgrService.h
+END

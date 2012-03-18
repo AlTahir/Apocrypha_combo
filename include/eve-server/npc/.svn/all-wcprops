@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/811/branches/experimental/include/eve-server/npc
+END
+NPCAI.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/811/branches/experimental/include/eve-server/npc/NPCAI.h
+END
+NPCAI_State.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/806/branches/experimental/include/eve-server/npc/NPCAI_State.h
+END
+NPC.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/811/branches/experimental/include/eve-server/npc/NPC.h
+END

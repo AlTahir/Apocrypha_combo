@@ -1,0 +1,86 @@
+10
+
+dir
+820
+http://svn.evemu.org/branches/experimental/src/eve-common
+http://svn.evemu.org
+
+
+
+2010-05-10T14:40:59.417647Z
+820
+bloody.rabbit
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+53638f16-6364-11df-b3cf-17e690f86674
+
+destiny
+dir
+
+utils
+dir
+
+python
+dir
+
+cache
+dir
+
+database
+dir
+
+marshal
+dir
+
+network
+dir
+
+packets
+dir
+
+CMakeLists.txt
+file
+
+
+
+
+2012-03-18T14:01:55.999260Z
+f2a278124558379b310ea91e9ec92bcc
+2010-05-09T12:43:14.292279Z
+819
+bloody.rabbit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+9939
+

@@ -1,0 +1,13 @@
+K 10
+svn:ignore
+V 56
+Makefile
+Makefile.in
+.deps
+.libs
+*.a
+config.h
+*.h
+*.cpp
+
+END

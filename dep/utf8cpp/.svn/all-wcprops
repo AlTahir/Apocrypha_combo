@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/!svn/ver/806/branches/experimental/dep/utf8cpp
+END
+utf8-checked.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/806/branches/experimental/dep/utf8cpp/utf8-checked.h
+END
+utf8-core.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/806/branches/experimental/dep/utf8cpp/utf8-core.h
+END
+utf8-unchecked.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/806/branches/experimental/dep/utf8cpp/utf8-unchecked.h
+END
+utf8.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/806/branches/experimental/dep/utf8cpp/utf8.h
+END

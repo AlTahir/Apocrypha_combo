@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/807/branches/experimental/src/eve-server/corporation
+END
+CorporationService.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/806/branches/experimental/src/eve-server/corporation/CorporationService.cpp
+END
+CorporationDB.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/806/branches/experimental/src/eve-server/corporation/CorporationDB.cpp
+END
+CorpMgrService.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/806/branches/experimental/src/eve-server/corporation/CorpMgrService.cpp
+END
+CorpStationMgrService.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/807/branches/experimental/src/eve-server/corporation/CorpStationMgrService.cpp
+END
+LPService.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/806/branches/experimental/src/eve-server/corporation/LPService.cpp
+END
+CorpRegistryService.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/806/branches/experimental/src/eve-server/corporation/CorpRegistryService.cpp
+END

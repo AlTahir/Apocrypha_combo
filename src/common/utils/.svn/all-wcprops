@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/!svn/ver/819/branches/experimental/src/common/utils
+END
+utils_time.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/806/branches/experimental/src/common/utils/utils_time.cpp
+END
+timer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/806/branches/experimental/src/common/utils/timer.cpp
+END
+Deflate.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/806/branches/experimental/src/common/utils/Deflate.cpp
+END
+DirWalker.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/806/branches/experimental/src/common/utils/DirWalker.cpp
+END
+Seperator.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/806/branches/experimental/src/common/utils/Seperator.cpp
+END
+utils_hex.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/806/branches/experimental/src/common/utils/utils_hex.cpp
+END
+utils_string.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/819/branches/experimental/src/common/utils/utils_string.cpp
+END
+misc.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/806/branches/experimental/src/common/utils/misc.cpp
+END
+crc32.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/806/branches/experimental/src/common/utils/crc32.cpp
+END
+XMLParser.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/819/branches/experimental/src/common/utils/XMLParser.cpp
+END

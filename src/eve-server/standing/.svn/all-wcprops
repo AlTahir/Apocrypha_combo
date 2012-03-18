@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/806/branches/experimental/src/eve-server/standing
+END
+WarRegistryService.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/806/branches/experimental/src/eve-server/standing/WarRegistryService.cpp
+END
+FactionWarMgrService.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/806/branches/experimental/src/eve-server/standing/FactionWarMgrService.cpp
+END
+FactionWarMgrDB.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/806/branches/experimental/src/eve-server/standing/FactionWarMgrDB.cpp
+END
+Standing2Service.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/806/branches/experimental/src/eve-server/standing/Standing2Service.cpp
+END
+StandingDB.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/806/branches/experimental/src/eve-server/standing/StandingDB.cpp
+END

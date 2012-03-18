@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/820/branches/experimental/include/eve-server
+END
+PyService.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/806/branches/experimental/include/eve-server/PyService.h
+END
+EVEServerConfig.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/819/branches/experimental/include/eve-server/EVEServerConfig.h
+END
+Client.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/820/branches/experimental/include/eve-server/Client.h
+END
+PyServiceMgr.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/806/branches/experimental/include/eve-server/PyServiceMgr.h
+END
+PyServiceCD.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/820/branches/experimental/include/eve-server/PyServiceCD.h
+END
+EVEServerPCH.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/819/branches/experimental/include/eve-server/EVEServerPCH.h
+END
+ClientSession.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/806/branches/experimental/include/eve-server/ClientSession.h
+END
+ServiceDB.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/806/branches/experimental/include/eve-server/ServiceDB.h
+END
+NetService.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/806/branches/experimental/include/eve-server/NetService.h
+END
+PyBoundObject.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/806/branches/experimental/include/eve-server/PyBoundObject.h
+END
+PyCallable.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/806/branches/experimental/include/eve-server/PyCallable.h
+END
+EntityList.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/806/branches/experimental/include/eve-server/EntityList.h
+END

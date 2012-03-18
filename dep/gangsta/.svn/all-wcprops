@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/!svn/ver/806/branches/experimental/dep/gangsta
+END
+GaPreReqs.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/806/branches/experimental/dep/gangsta/GaPreReqs.h
+END
+GaMath.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/806/branches/experimental/dep/gangsta/GaMath.cpp
+END
+GaTypes.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/806/branches/experimental/dep/gangsta/GaTypes.h
+END
+GaMath.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/806/branches/experimental/dep/gangsta/GaMath.h
+END
+GaTypes.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/806/branches/experimental/dep/gangsta/GaTypes.cpp
+END

@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/820/branches/experimental/src/eve-server/ship
+END
+ModuleManager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/820/branches/experimental/src/eve-server/ship/ModuleManager.cpp
+END
+TargetManager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/820/branches/experimental/src/eve-server/ship/TargetManager.cpp
+END
+Ship.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/820/branches/experimental/src/eve-server/ship/Ship.cpp
+END
+ShipService.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/820/branches/experimental/src/eve-server/ship/ShipService.cpp
+END
+BeyonceService.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/820/branches/experimental/src/eve-server/ship/BeyonceService.cpp
+END
+InsuranceService.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/806/branches/experimental/src/eve-server/ship/InsuranceService.cpp
+END
+ShipDB.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/806/branches/experimental/src/eve-server/ship/ShipDB.cpp
+END
+DestinyManager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/811/branches/experimental/src/eve-server/ship/DestinyManager.cpp
+END

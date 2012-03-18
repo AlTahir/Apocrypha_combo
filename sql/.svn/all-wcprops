@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/!svn/ver/806/branches/experimental/sql
+END
+prime_db.sql
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/!svn/ver/806/branches/experimental/sql/prime_db.sql
+END
+evemu_dynamic-dump.sql
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/806/branches/experimental/sql/evemu_dynamic-dump.sql
+END
+evemu_static-dump.sql
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/806/branches/experimental/sql/evemu_static-dump.sql
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/!svn/ver/806/branches/experimental/sql/README
+END

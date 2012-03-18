@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/806/branches/experimental/include/eve-server/spawn
+END
+SpawnDB.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/806/branches/experimental/include/eve-server/spawn/SpawnDB.h
+END
+SpawnManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/806/branches/experimental/include/eve-server/spawn/SpawnManager.h
+END

@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/819/branches/experimental/include/xmlpktgen
+END
+DecodeGenerator.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/806/branches/experimental/include/xmlpktgen/DecodeGenerator.h
+END
+ConstructGenerator.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/806/branches/experimental/include/xmlpktgen/ConstructGenerator.h
+END
+DumpGenerator.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/806/branches/experimental/include/xmlpktgen/DumpGenerator.h
+END
+HeaderGenerator.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/806/branches/experimental/include/xmlpktgen/HeaderGenerator.h
+END
+XMLPacketGen.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/819/branches/experimental/include/xmlpktgen/XMLPacketGen.h
+END
+DestructGenerator.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/806/branches/experimental/include/xmlpktgen/DestructGenerator.h
+END
+EncodeGenerator.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/806/branches/experimental/include/xmlpktgen/EncodeGenerator.h
+END
+XMLPktGenPCH.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/819/branches/experimental/include/xmlpktgen/XMLPktGenPCH.h
+END
+Generator.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/819/branches/experimental/include/xmlpktgen/Generator.h
+END
+CloneGenerator.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/806/branches/experimental/include/xmlpktgen/CloneGenerator.h
+END

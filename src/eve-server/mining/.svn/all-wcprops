@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/806/branches/experimental/src/eve-server/mining
+END
+MiningCommands.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/806/branches/experimental/src/eve-server/mining/MiningCommands.cpp
+END
+ReprocessingService.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/806/branches/experimental/src/eve-server/mining/ReprocessingService.cpp
+END
+MiningDB.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/806/branches/experimental/src/eve-server/mining/MiningDB.cpp
+END
+ReprocessingDB.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/806/branches/experimental/src/eve-server/mining/ReprocessingDB.cpp
+END
+Asteroid.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/806/branches/experimental/src/eve-server/mining/Asteroid.cpp
+END
+AsteroidBeltManager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/806/branches/experimental/src/eve-server/mining/AsteroidBeltManager.cpp
+END
