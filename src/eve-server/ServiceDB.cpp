@@ -39,7 +39,7 @@ bool ServiceDB::DoLogin(const char *login, const char *pass, uint32 &accountID, 
 	}
 	
 	if(!sDatabase.RunQuery(res,
-		"SELECT accountID,role,password,PASSWORD('%s'),MD5('%s'), online"
+		"SELECT accountID, role, password, PASSWORD( '%s' ), MD5( '%s' ), online, banned"
 		" FROM account"
 		" WHERE accountName='%s'", pass, pass, login))
 	{
@@ -64,7 +64,7 @@ bool ServiceDB::DoLogin(const char *login, const char *pass, uint32 &accountID, 
 		}
 
 		if(!sDatabase.RunQuery(res,
-			"SELECT accountID,role,password,PASSWORD('%s'),MD5('%s'), online"
+			"SELECT accountID,role,password,PASSWORD('%s'),MD5('%s'), online, banned"
 			" FROM account"
 			" WHERE accountName='%s'", pass, pass, login))
 		{
@@ -89,6 +89,12 @@ bool ServiceDB::DoLogin(const char *login, const char *pass, uint32 &accountID, 
 		_log(SERVICE__ERROR, "Login failed for account '%s'", login);
 		return false;
 	}
+	
+	if( 0 != row.GetInt( 6 ) )
+		{
+			sLog.Error( "ServiceDB", "Account '%s' has been banned from the server.", login);
+			return false;
+		}
 	
 	accountID = row.GetUInt(0);
 	role = row.GetUInt(1);
@@ -494,6 +500,21 @@ void ServiceDB::SetAccountOnlineStatus(uint32 accountID, bool onoff_status) {
 	if(!sDatabase.RunQuery(err,
 		"UPDATE account "
 		" SET account.online = %d "
+		" WHERE accountID = %u ",
+		onoff_status, accountID))
+	{
+		codelog(SERVICE__ERROR, "Error in query: %s", err.c_str());
+	}
+}
+
+void ServiceDB::SetAccountBanStatus(uint32 accountID, bool onoff_status) {
+	DBerror err;
+
+	_log(CLIENT__TRACE, "AccStatus: %s account %u.", onoff_status ? "Banned" : "Removed ban on", accountID );
+
+	if(!sDatabase.RunQuery(err,
+		" UPDATE account "
+		" SET account.banned = %d "
 		" WHERE accountID = %u ",
 		onoff_status, accountID))
 	{

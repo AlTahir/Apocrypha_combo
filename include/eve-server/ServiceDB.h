@@ -80,7 +80,8 @@ public:
 	void SetCharacterOnlineStatus(uint32 char_id, bool onoff_status);
 
 	void SetAccountOnlineStatus(uint32 accountID, bool onoff_status);
-
+	void SetAccountBanStatus(uint32 accountID, bool onoff_status);
+	
 protected:
 	void ProcessStringChange(const char * key, const std::string & oldValue, const std::string & newValue, PyDict * notif, std::vector<std::string> & dbQ);
 	void ProcessRealChange(const char * key, double oldValue, double newValue, PyDict * notif, std::vector<std::string> & dbQ);

@@ -75,7 +75,31 @@ bool CommandDB::GetRoidDist(const char * sec, std::map<double, uint32> &roids) {
 	return !roids.empty();
 }
 
+int CommandDB::GetAccountID(std::string name) {
+	
+	DBQueryResult res;
 
+	if(!sDatabase.RunQuery(res,
+		" SELECT "
+		" AccountID "
+		" FROM character_ "
+		" WHERE characterID = ( SELECT itemID FROM entity WHERE itemName = '%s' )", name.c_str()))
+	{
+		sLog.Error("CommandDB", "Failed to retrieve accountID for %s", name.c_str());
+		return 0;
+	}
+
+	DBResultRow row;
+
+	if( !res.GetRow(row) )
+	{
+		sLog.Error("CommandDB", "Query Returned no results");
+		return 0;
+	}
+
+	return row.GetInt( 0 );
+	
+}
 
 
 
