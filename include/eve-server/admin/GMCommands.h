@@ -1,6 +1,6 @@
 //no macroguard on purpose
 
-COMMAND( create, ROLE_ADMIN,
+COMMAND( grantwith, ROLE_ADMIN,
          "(itemID) [count] - Create count or 1 of the specified item." )
 COMMAND( search, ROLE_ADMIN,
          "(text) - Search for items matching the specified query" )
@@ -14,7 +14,7 @@ COMMAND( pop, ROLE_ADMIN,
          "(type) (key) (value) - Send an OnRemoteMessage" )
 COMMAND( goto, ROLE_ADMIN,
          "(x) (y) (z) - Jump to the specified position in space. Stopped." )
-COMMAND( spawn, ROLE_ADMIN,
+COMMAND( makeappear, ROLE_ADMIN,
          "(typeID) - Spawn an NPC with the specified type." )
 COMMAND( location, ROLE_ADMIN,
          "- Gives you back your current location in space." )

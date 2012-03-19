@@ -134,14 +134,18 @@ protected:
 
 class MiningLaserModule : public ActivatableModule {
 public:
-	MiningLaserModule(Client *owner, InventoryItemRef self, InventoryItemRef charge_)
-		: ActivatableModule("miningLaser", owner, self, charge_) {}
-	virtual ~MiningLaserModule() {}
+   MiningLaserModule(Client *owner, InventoryItemRef self, InventoryItemRef charge_)
+      : ActivatableModule("miningLaser", owner, self, charge_), m_EffectTimer(0), m_MiningDuration(0) {}
+   virtual ~MiningLaserModule() {}
 protected:
-	virtual void StartEffect();
-	virtual void DoEffect();
-	virtual void StopEffect();
-	virtual uint32 _ActivationInterval() const;
+   virtual void Process();
+   virtual void StartEffect();
+   virtual void DoEffect();
+   virtual void StopEffect();
+   virtual uint32 _ActivationInterval() const;
+
+   Timer m_EffectTimer;
+   int32 m_MiningDuration;      // used when the user cancels the mining before completation (without function yet??)
 };
 
 class GenericShipModule : public PassiveModule {

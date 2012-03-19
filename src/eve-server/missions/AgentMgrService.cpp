@@ -189,16 +189,21 @@ PyResult AgentMgrBound::Handle_DoAction(PyCallArgs &call) {
 		return NULL;
 	}
 	
-	//TODO: send loyaltyPoints in the keywords return.
-	//uint32 loyaltyPoints = m_agent->GetLoyaltyPoints(call.client);
+   //TODO: send loyaltyPoints in the keywords return.
+   //uint32 loyaltyPoints = m_agent->GetLoyaltyPoints(call.client);
 
-	DoAction_Result res;
+   DoAction_Result res;
     res.dialogue = new PyList;
 
-	std::map<uint32, std::string> choices;
-	m_agent->DoAction( call.client, args.arg->AsInt()->value(), res.agentSays, choices );
+   std::map<uint32, std::string> choices;
+   if( args.arg->IsInt() ){
+      m_agent->DoAction( call.client, args.arg->AsInt()->value(), res.agentSays, choices );
+   }
+   else {
+      codelog(SERVICE__ERROR, "Argument type is : '%s'",args.arg->TypeString());
+   }
 
-	DoAction_Dialogue_Item choice;
+   DoAction_Dialogue_Item choice;
 
 	std::map<uint32, std::string>::iterator cur, end;
 	cur = choices.begin();

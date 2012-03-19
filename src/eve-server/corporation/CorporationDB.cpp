@@ -721,9 +721,22 @@ PyObject *CorporationDB::GetCorporation(uint32 corpID) {
 PyObject *CorporationDB::GetEveOwners() {
     DBQueryResult res;
 
-    if (!sDatabase.RunQuery(res,
+    /*if (!sDatabase.RunQuery(res,
         " SELECT * FROM eveStaticOwners "))
     {
+        codelog(SERVICE__ERROR, "Error in query: %s", res.error.c_str());
+        return NULL;
+    }*/
+    if(!sDatabase.RunQuery(res,
+            "(SELECT"
+            " itemID as ownerID,"
+            " itemName as ownerName,"
+            " typeID FROM entity"
+            " WHERE itemId <140000000 AND itemID NOT IN(select ownerID from evestaticowners))"
+            " UNION ALL "
+            "(SELECT * FROM evestaticowners)"
+            " ORDER BY ownerID"))
+	{
         codelog(SERVICE__ERROR, "Error in query: %s", res.error.c_str());
         return NULL;
     }

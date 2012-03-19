@@ -2619,6 +2619,160 @@ void AfterburnerModule::Deactivate(const std::string &effectName) {
 	}
 }
 
+void MiningLaserModule::Process()
+{
+   switch( m_state )
+   {
+
+   case Offline:
+   case PuttingOnline:
+   case Online:
+      //pass up to parent.
+      ShipModule::Process();
+      break;
+      
+   case Active:
+      if( m_timer.Check() )
+      {
+         _log(SHIP__MODULE_TRACE, "Module %s (%u): Activation timer expired.", m_item->itemName().c_str(), m_item->itemID());
+         
+         DoEffect();
+
+         SystemEntity* target = m_pilot->targets.GetTarget( m_target );
+         if( target != NULL )
+         {
+            Asteroid* roid = static_cast<Asteroid*>(target);
+            // We have completed mined a ore, get the total mined and spawn in the ship cargo
+            uint32 locationID = m_pilot->GetShipID();
+            EVEItemFlags flag = flagCargoHold;
+            float freeCargoHold = m_pilot->GetShip()->GetRemainingCapacity(flag);
+
+            // Guessed formula
+            float ores = m_item->miningAmount() / roid->Item()->volume();
+
+            // Math's down to the free Cargohold
+            if( m_item->miningAmount() > freeCargoHold )
+            {
+               ores = freeCargoHold / roid->Item()->volume();
+               ores = floor(ores);
+               m_repeatCount = 0;
+            }
+
+            // only insert into DB if bigger than 0 ores
+            if( ores > 0 )
+            {
+               // Get the item id to spawn in ship cargo
+               ItemData idata(
+                  roid->Item()->typeID(),
+                  m_pilot->GetCharacterID(),
+                  0, //temp location
+                  flag,
+                  (uint32)ores
+               );
+               InventoryItemRef i = m_pilot->services().item_factory.SpawnItem( idata );
+               if( i == NULL )
+               {
+                  throw( PyException( MakeCustomError( "Unable to create item of type %s.", roid->Item()->typeID() ) ) );
+               }
+
+               //Move to location
+               i->Move( locationID, flag, true );
+
+               //we dont need our reference anymore...
+               //i->DecRef();
+            }
+         }
+
+         uint32 actualCharge = m_pilot->GetShip()->charge();
+         actualCharge -= m_item->capacitorNeed();
+         m_pilot->GetShip()->Set_charge(actualCharge);
+         
+         if( m_repeatCount > 0 )
+         {
+            m_repeatCount--;
+            //let the timer go again.
+         }
+         else
+         {
+            _log(SHIP__MODULE_TRACE, "Module %s (%u): No more repeates requested. Deactivating.", m_item->itemName().c_str(), m_item->itemID());
+            m_state = Online;
+            StopEffect();   //must send stop effect before clearing target info!
+            m_target = 0;
+            m_repeatCount = 0;
+         }
+      }
+      
+      // Minning laser activation interval differs from mining effects interval
+      if( m_EffectTimer.Check() )
+      {
+         DoEffect();
+      }
+      break;
+      
+   case Deactivating:
+      if( m_timer.Check(false) )
+      {
+         SystemEntity* target = m_pilot->targets.GetTarget( m_target );
+         if( target != NULL )
+         {
+            Asteroid* roid = static_cast<Asteroid*>(target);
+            // We have completed mined a ore, get the total mined and spawn in the ship cargo
+            uint32 locationID = m_pilot->GetShipID();
+            EVEItemFlags flag = flagCargoHold;
+            float freeCargoHold = m_pilot->GetShip()->GetRemainingCapacity(flag);
+
+            // Guessed formula
+            float ores = m_item->miningAmount() / roid->Item()->volume();
+
+            // guessed stop formula, if mining is stop before the complete cycle
+            ores = ores / (m_item->duration() / 1000);
+            ores = ores * (m_MiningDuration / 1000);
+
+            // Math's down to the free Cargohold
+            if( m_item->miningAmount() > freeCargoHold )
+            {
+               ores = freeCargoHold / roid->Item()->volume();
+               ores = floor(ores);
+               m_repeatCount = 0;
+            }
+
+            // only insert into DB if bigger than 0 ores
+            if( ores > 0 )
+            {
+               // Get the item id to spawn in ship cargo
+               ItemData idata(
+                  roid->Item()->typeID(),
+                  m_pilot->GetCharacterID(),
+                  0, //temp location
+                  flag,
+                  (uint32)ores
+               );
+               InventoryItemRef i = m_pilot->services().item_factory.SpawnItem( idata );
+               if( i == NULL )
+               {
+                  throw( PyException( MakeCustomError( "Unable to create item of type %s.", roid->Item()->typeID() ) ) );
+               }
+
+               //Move to location
+               i->Move( locationID, flag, true );
+
+               //we dont need our reference anymore...
+               //i->DecRef();
+            }
+         }
+
+         _log(SHIP__MODULE_TRACE, "Module %s (%u): Deactivation complete, module online.", m_item->itemName().c_str(), m_item->itemID());
+         m_state = Online;
+         StopEffect();   //must send stop effect before clearing target info!
+         m_target = 0;
+         m_repeatCount = 0;
+
+      }
+      break;
+      
+   //no default on purpose.
+   }
+}
 
 
 
