@@ -184,7 +184,7 @@ public:
 	double z() const                                { return GetPosition().z; }	//this is terribly inefficient.
 
 	uint32 GetAllianceID() const                    { return GetChar() ? GetChar()->allianceID() : 0; }
-	uint32 GetWarFactionID() const                    { return GetChar() ? GetChar()->warFactionID() : 0; }
+	uint32 GetWarFactionID() const                  { return GetChar() ? GetChar()->warFactionID() : 0; }
 	double GetBounty() const                        { return GetChar() ? GetChar()->bounty() : 0.0; }
 	double GetSecurityRating() const                { return GetChar() ? GetChar()->securityRating() : 0.0; }
 	double GetBalance() const                       { return GetChar() ? GetChar()->balance() : 0.0; }

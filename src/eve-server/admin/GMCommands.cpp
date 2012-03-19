@@ -30,7 +30,7 @@
 #include "inventory/InventoryDB.h"
 #include "inventory/InventoryItem.h"
 
-PyResult Command_grantwith( Client* who, CommandDB* db, PyServiceMgr* services, const Seperator& args )
+PyResult Command_create( Client* who, CommandDB* db, PyServiceMgr* services, const Seperator& args )
 {
 	if( !args.isNumber( 1 ) )
 		throw PyException( MakeCustomError( "Argument 1 must be type ID." ) );
@@ -245,7 +245,7 @@ PyResult Command_goto( Client* who, CommandDB* db, PyServiceMgr* services, const
 	return new PyString( "Goto successfull." );
 }
 
-PyResult Command_makeappear( Client* who, CommandDB* db, PyServiceMgr* services, const Seperator& args )
+PyResult Command_spawn( Client* who, CommandDB* db, PyServiceMgr* services, const Seperator& args )
 {
 	if( !args.isNumber( 1 ) )
 		throw PyException( MakeCustomError( "Argument 1 should be an item type ID" ) );

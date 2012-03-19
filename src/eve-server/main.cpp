@@ -51,6 +51,14 @@ int main( int argc, char* argv[] )
     printf("FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more\n");
     printf("details.\n");
     printf("\n");
+	printf("\n");
+	printf("Combo revision info:\n");
+	printf("This rev is intended for using as open-test server in a open scale.\n");
+	printf("This is an old rev,patched with multi-rev updates.\n");
+	printf("Full workability is NOT guaranteed,as the server is in PRE-ALPHA state. Use it on your own risk.\n");
+	printf("Also this server in certain using ways can violate EULA EVE Online Live user agreement. Use it on your own risk.\n");
+	printf("Repack author - Zuko.\n");
+	printf("Date - 01 June 2011.\n");
 
     sLog.Log("main", "EVEmu %s", EVEMU_REVISION );
     sLog.Log("server init", "\n"
