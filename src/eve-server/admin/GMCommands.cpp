@@ -546,3 +546,33 @@ PyResult Command_giveskill( Client* who, CommandDB* db, PyServiceMgr* services, 
 
 	return new PyString ("Skill Gifting Failure");
 }
+
+PyResult Command_kick( Client* who, CommandDB* db, PyServiceMgr* services, const Seperator& args )
+{
+	
+	Client *target;
+
+	if( args.argCount() == 2 ) {
+
+		if( args.isNumber( 1 ) ) {
+			int id = atoi( args.arg( 1 ).c_str() );
+			target = services->entity_list.FindCharacter( id );
+		}
+		else if( !args.isNumber( 1 ) ) {
+			const char *name = args.arg( 1 ).c_str();
+			target = services->entity_list.FindCharacter( name );
+		}
+		else
+			throw PyException( MakeCustomError( "Indeterminate argument, quitting" ) );
+
+		if(target == NULL)
+			throw PyException( MakeCustomError( "Cannot find Character" ) );
+		else
+			target->DisconnectClient();
+
+	} else
+		throw PyException( MakeCustomError("Correct Usage: /kick [Character Name]") );
+
+	return NULL;
+
+}

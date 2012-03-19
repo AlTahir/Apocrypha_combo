@@ -27,8 +27,8 @@
 
 #include "database/EVEDBUtils.h"
 #include "packets/General.h"
-#include "python/classes/CRowSet.h"
 #include "python/classes/DBRowDescriptor.h"
+#include "python/classes/CRowSet.h"
 #include "python/PyVisitor.h"
 #include "python/PyRep.h"
 

@@ -32,6 +32,8 @@ COMMAND( fit, ROLE_ADMIN,
 		"(itemID) - Fits selected item to active ship." )
 COMMAND( giveskill, ROLE_ADMIN,
 		"(itemID) - gives skills to fit item." )
+COMMAND( kick, ROLE_ADMIN,
+		"(charName) - kicks [charName] from the server")
 
 
 

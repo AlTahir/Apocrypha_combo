@@ -253,6 +253,11 @@ public:
 	virtual void Killed(Damage &fatal_blow);
 	virtual SystemManager *System() const { return(m_system); }
 	
+	/********************************************************************/
+    /* Server Administration Interface                                  */
+    /********************************************************************/
+	void DisconnectClient() { CloseClientConnection(); }
+	
 protected:
 	void _ReduceDamage(Damage &d);
     void _UpdateSession( const CharacterConstRef& character );
@@ -308,6 +313,8 @@ protected:
     bool Handle_PingReq( PyPacket* packet ) { _SendPingResponse( packet->dest, packet->source.callID ); return true; }
     bool Handle_PingRsp( PyPacket* packet ) { /* do nothing */ return true; }
 
+	
+	
 private:
 	//queues for destiny updates:
 	PyList* m_destinyEventQueue;	//we own these. These are events as used in OnMultiEvent
