@@ -1877,7 +1877,7 @@ int ArmorPlatesModule::Activate(const std::string &effectName, uint32 target, ui
 				theShip->Set_powerLoad( powerLoad );
 				/* TODO: calculates the bonus from char skill */
 				theShip->Set_mass( theShip->mass() + m_item->massAddition() );
-				theShip->Set_maxArmor( theShip->armorHP() + m_item->armorHPBonusAdd() );
+				theShip->Set_maxArmor( theShip->armorHP() + m_item->armorHpBonusAdd() );
 				theShip->Set_armorHP( theShip->maxArmor() );
 				
 				_log(SHIP__MODULE_TRACE, "Module %s (%u): Activate requested for effect.", m_item->itemName().c_str(), m_item->itemID());
@@ -1927,7 +1927,7 @@ void ArmorPlatesModule::Deactivate(const std::string &effectName) {
 			theShip->Set_powerLoad( powerLoad );
 
 			theShip->Set_mass( theShip->mass() - m_item->massAddition() );
-			theShip->Set_maxArmor( theShip->maxArmor() - m_item->armorHPBonusAdd() );
+			theShip->Set_maxArmor( theShip->maxArmor() - m_item->armorHpBonusAdd() );
 			theShip->Set_armorHP( theShip->maxArmor() );
 
 			m_state = Offline;
