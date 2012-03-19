@@ -783,6 +783,7 @@ bool MarketDB::RecordTransaction(
 		" market_transactions ("
 		"	transactionID, transactionDateTime, typeID, quantity,"
 		"	price, transactionType, clientID, regionID, stationID"
+		"	corpTransaction"
 		" ) VALUES ("
 		"	NULL, " I64u ", %u, %u,"
 		"	%f, %d, %u, %u, %u"
@@ -869,4 +870,516 @@ PyRep *MarketDB::GetTransactions(uint32 characterID, uint32 typeID, uint32 quant
 	}
 
 	return DBResultToRowset(res);
+}
+
+uint32 MarketDB::GetPlayerNumberOutstandingContracts(uint32 characterID )
+{
+	// As atm i dont know wich table is contracts one so we hack it to one
+	DBQueryResult res;
+	DBResultRow row;
+	if(!sDatabase.RunQuery(res,
+		"SELECT numOutstandingContracts"
+		" FROM chrcontractinfo"
+		" WHERE characterID=%d", characterID ))
+	{
+		codelog( MARKET__ERROR, "Error in query: %s", res.error.c_str() );
+		return NULL;
+	}
+	res.GetRow(row);
+	return row.GetInt( 0 );
+}
+
+PyRep *MarketDB::GetPlayerItemsInStation( uint32 characterID, uint32 stationID )
+{
+	// Hack into NULL
+	DBQueryResult res;
+
+	if(!sDatabase.RunQuery(res,
+		"SELECT itemID, itemName, typeID, ownerID, locationID, flag, contraband, singleton, quantity, x, y, z, custominfo, 0 AS categoryID, 0 AS groupID FROM entity WHERE  ownerID=%d && locationID=%d && flag=4", characterID, stationID)){
+			codelog( MARKET__ERROR, "Error in query: %s", res.error.c_str() );
+			return NULL;
+	}
+	return DBResultToRowset( res );
+}
+
+PyRep *MarketDB::GetContractListForOwner( uint32 characterID, bool isAccepted, uint32 status, uint32 contractType, uint32 issuerCorpID )
+{
+	DBQueryResult res;
+	if(!sDatabase.RunQuery(res,
+		"SELECT"
+		" contractID,"
+		" issuerID,"
+		" issuerCorpID,"
+		" type,"
+		" avail AS availability,"
+		" assigneeID,"
+		" expiretime,"
+		" duration AS numDays,"
+		" startStationID,"
+		" endStationID,"
+		" startSolarSystemID,"
+		" endSolarSystemID,"
+		" startRegionID,"
+		" endRegionID,"
+		" price,"
+		" reward,"
+		" collateral,"
+		" title,"
+		" description,"
+		" forCorp,"
+		" status,"
+		" isAccepted,"
+		" acceptorID,"
+		" dateIssued,"
+		" dateExpired,"
+		" dateAccepted,"
+		" dateCompleted,"
+		" volume"
+		" FROM contract"
+		" WHERE issuerID=%d", characterID) )
+	{
+		codelog( MARKET__ERROR, "Error in query: %s", res.error.c_str() );
+		return NULL;
+	}
+	return DBResultToRowset( res );
+}
+PyRep *MarketDB::GetContractList(  )
+{
+	// Dont care about anything at the moment, more packet stuff needed first, so return the whole list!
+	DBQueryResult res;
+	if(!sDatabase.RunQuery(res,
+		"SELECT"
+		" contractID,"
+		" issuerID,"
+		" issuerCorpID,"
+		" type,"
+		" avail AS availability,"
+		" assigneeID,"
+		" expiretime,"
+		" duration AS numDays,"
+		" startStationID,"
+		" endStationID,"
+		" startSolarSystemID,"
+		" endSolarSystemID,"
+		" startRegionID,"
+		" endRegionID,"
+		" price,"
+		" reward,"
+		" collateral,"
+		" title,"
+		" description,"
+		" forCorp,"
+		" status,"
+		" isAccepted,"
+		" acceptorID,"
+		" dateIssued,"
+		" dateExpired,"
+		" dateAccepted,"
+		" dateCompleted,"
+		" volume"
+		" FROM contract") )
+	{
+		codelog( MARKET__ERROR, "Error in query: %s", res.error.c_str() );
+		return NULL;
+	}
+	return DBResultToRowset( res );
+}
+
+PyRep *MarketDB::CollectMyPageInfo( uint32 clientID )
+{
+	DBQueryResult res;
+	DBResultRow row;
+	if(!sDatabase.RunQuery(res,
+		"SELECT numOutstandingContractsNonCorp,"
+		" numOutstandingContractsForCorp,"
+		" numOutstandingContracts,"
+		" numContractsLeft,"
+		" numRequiresAttention,"
+		" numRequiresAttentionCorp,"
+		" numAssignedTo,"
+		" numAssignedToCorp,"
+		" numBiddingOn,"
+		" numInProgress,"
+		" numBiddingOnCorp,"
+		" numInProgressCorp"
+		" FROM chrcontractinfo"
+		" WHERE characterID=%d", clientID))
+	{
+		codelog( MARKET__ERROR, "Error in query: %s", res.error.c_str() );
+		return NULL;
+	}
+
+	if(!res.GetRow(row)) {
+		codelog(MARKET__ERROR, "Player %u chrcontractinfo not found.", clientID);
+		return NULL;
+	}
+
+	PyDict* PageInfo = new PyDict;
+	PageInfo->SetItemString( "numOutstandingContractsNonCorp", new PyInt( row.GetInt( 0 ) ) );
+	PageInfo->SetItemString( "numOutstandingContractsForCorp", new PyInt( row.GetInt( 1 ) ) );
+	PageInfo->SetItemString( "numOutstandingContracts", new PyInt( row.GetInt( 2 ) ) );
+	PageInfo->SetItemString( "numContractsLeft", new PyInt( row.GetInt( 3 ) ) );
+	PageInfo->SetItemString( "numRequiresAttention", new PyInt( row.GetInt( 4 ) ) );
+	PageInfo->SetItemString( "numRequiresAttentionCorp", new PyInt( row.GetInt( 5 ) ) );
+	PageInfo->SetItemString( "numAssignedTo", new PyInt( row.GetInt( 6 ) ) );
+	PageInfo->SetItemString( "numAssignedToCorp", new PyInt( row.GetInt( 7 ) ) );
+	PageInfo->SetItemString( "numBiddingOn", new PyInt( row.GetInt( 8 ) ) );
+	PageInfo->SetItemString( "numInProgress", new PyInt( row.GetInt( 9 ) ) );
+	PageInfo->SetItemString( "numBiddingOnCorp", new PyInt( row.GetInt( 10 ) ) );
+	PageInfo->SetItemString( "numInProgressCorp", new PyInt( row.GetInt( 11 ) ) );
+	return PageInfo;
+}
+
+PyRep *MarketDB::CreateContract( uint32 characterID, uint32 characterCorpID, uint32 type, uint32 avail, uint32 assigneeID, uint32 expiretime, uint32 duration, uint32 startStationID, uint32 endStationID, uint32 startSolarSystemID, uint32 endSolarSystemID, uint32 startRegionID, uint32 endRegionID, uint32 price, uint32 reward, uint32 collateral, std::string title, std::string description/*, std::vector<int32> itemsID, std::vector<int32> quantity, uint32 flag, std::vector<int32> requestItemID, std::vector<int32> requestItemQuantity*/, bool forCorp )
+{
+	DBerror err;
+	DBQueryResult res;
+	DBResultRow row;
+	uint32 contractID = 0;
+	uint64 timeNow = Win32TimeNow();
+	uint64 timeExpired = Win32TimeNow() + ((expiretime / 60) * Win32Time_Hour);
+	uint8 numDays = ((expiretime / 60) * Win32Time_Hour) / Win32Time_Day ;
+
+	if(endStationID == 0)endStationID = startStationID;
+	if(!sDatabase.RunQuery(res,
+		"SELECT solarSystemID, regionID"
+		" FROM stastations"
+		" WHERE stationID=%d", endStationID))
+	{
+		codelog(MARKET__ERROR, "Error in query: %s", res.error.c_str() );
+		return NULL;
+	}
+
+	if( !res.GetRow(row) )
+	{
+		codelog(MARKET__ERROR, "StationID %u not found", endStationID);
+		return NULL;
+	}
+	endSolarSystemID = row.GetInt( 0 );
+	endRegionID = row.GetInt( 1 );
+
+	if(assigneeID == 0)assigneeID = characterID;
+
+	if(!sDatabase.RunQueryLID(err, contractID,
+		"INSERT INTO"
+		" contract("
+		" contractID,"
+		" issuerID,"
+		" issuerCorpID,"
+		" type,"
+		" avail,"
+		" assigneeID,"
+		" expiretime,"
+		" duration,"
+		" startStationID,"
+		" endStationID,"
+		" startSolarSystemID,"
+		" endSolarSystemID,"
+		" startRegionID,"
+		" endRegionID,"
+		" price,"
+		" reward,"
+		" collateral,"
+		" title,"
+		" description,"
+		" forCorp,"
+		" status,"
+		" isAccepted,"
+		" acceptorID,"
+		" dateIssued,"
+		" dateExpired,"
+		" dateAccepted,"
+		" dateCompleted,"
+		" volume" // This should be the volume of all the items
+		")VALUES("
+		"NULL, %u, %u, %u, %u, %u, %u, %u, %u, %u, %u, %u, %u, %u, %u, %u, %u, '%s', '%s', %u, 0, false, NULL, " I64u ", " I64u ", NULL, " I64u ", 0)",
+		characterID, characterCorpID, type, avail, assigneeID, expiretime, numDays, startStationID, endStationID, startSolarSystemID, 
+		endSolarSystemID, startRegionID, endRegionID, price, reward, collateral, "contract title", "contract description", forCorp, timeNow, timeExpired, timeExpired))
+	{
+		codelog(MARKET__ERROR, "Error in query: %s", err.c_str() );
+		return NULL;
+	}
+
+	if(!forCorp)
+	{
+		if(!sDatabase.RunQuery(err, 
+			"UPDATE"
+			" chrcontractinfo"
+			" SET numOutStandingContractsNonCorp=numOutStandingContractsNonCorp+1,"
+			" numOutstandingContracts=numOutstandingContracts+1"
+			" WHERE characterID=%d", characterID))
+		{
+			codelog(MARKET__ERROR, "Error in query: %s", err.c_str() );
+			return NULL;
+		}
+	}else{
+		if(!sDatabase.RunQuery(err, 
+			"UPDATE"
+			" chrcontractinfo"
+			" SET numOutStandingContractsForCorp=numOutStandingContractsForCorp+1,"
+			" numOutstandingContracts=numOutstandingContracts+1"
+			" WHERE characterID=%d", characterID))
+		{
+			codelog(MARKET__ERROR, "Error in query: %s", err.c_str() );
+			return NULL;
+		}
+	}
+	/*uint32 max = itemsID.capacity();
+	uint32 i = 0;
+	for(i = 0; i <= max; i++)
+	{
+		if(!sDatabase.RunQuery(err,
+			"INSERT INTO contracts_items("
+			" itemID,"
+			" contractID,"
+			" characterID,"
+			" quantity,"
+			" flag,"
+			" get"
+			") VALUES("
+			" %d, %d, %d, %d, 4, false)",
+			itemsID.at(i), contractID, characterID, quantity.at(i)
+			))
+		{
+			codelog(MARKET__ERROR, "Error in query: %s", res.c_str() );
+			return NULL;
+		}
+	}
+	max = requestItemID.capacity();
+	for(i = 0; i <= max; i++)
+	{
+		if(!sDatabase.RunQuery(err,
+			"INSERT INTO contracts_items("
+			" itemID,"
+			" contractID,"
+			" characterID,"
+			" quantity,"
+			" flag,"
+			" get"
+			") VALUES("
+			" %d, %d, %d, %d, 4, true)",
+			requestItemID.at(i), contractID, characterID, requestItemQuantity.at(i)
+			))
+		{
+			codelog(MARKET__ERROR, "Error in query: %s", res.c_str() );
+			return NULL;
+		}
+	}*/
+	return new PyInt( contractID );
+}
+
+PyRep *MarketDB::GetContract( uint32 contractID )
+{
+	DBQueryResult res;
+	if(!sDatabase.RunQuery(res,
+		"SELECT"
+		" contractID,"
+		" issuerID,"
+		" issuerCorpID,"
+		" type,"
+		" avail AS availability,"
+		" assigneeID,"
+		" expiretime,"
+		" duration AS numDays,"
+		" startStationID,"
+		" endStationID,"
+		" startSolarSystemID,"
+		" endSolarSystemID,"
+		" startRegionID,"
+		" endRegionID,"
+		" price,"
+		" reward,"
+		" collateral,"
+		" title,"
+		" description,"
+		" forCorp,"
+		" status,"
+		" isAccepted,"
+		" acceptorID,"
+		" dateIssued,"
+		" dateExpired,"
+		" dateAccepted,"
+		" dateCompleted,"
+		" volume"
+		" FROM contract"
+		" WHERE contractID=%d", contractID ))
+	{
+		codelog(MARKET__ERROR, "Error in query: %s", res.error.c_str() );
+		return NULL;
+	}
+
+	DBResultRow row;
+	if(!res.GetRow(row)) {
+		codelog(MARKET__ERROR, "Contract %d not found.", contractID);
+		return NULL;
+	}
+
+	return(DBRowToPackedRow(row));
+}
+
+PyRep *MarketDB::GetContractItems( uint32 contractID )
+{
+	DBQueryResult res;
+	bool success = false;
+	if(contractID == NULL)
+	{
+		success = sDatabase.RunQuery(res, "SELECT itemID, contractID, quantity, flag, typeID, get FROM contracts_items");
+	}else{
+		success = sDatabase.RunQuery(res, "SELECT itemID, contractID, quantity, flag, typeID, get FROM contracts_items WHERE contractID=%d", contractID);
+	}
+
+	if(!success)
+	{
+		codelog(MARKET__ERROR, "Error in query: %s", res.error.c_str() );
+		return NULL;
+	}
+
+	return DBResultToRowset( res );
+}
+
+PyRep *MarketDB::GetContractItemsForOwner( uint32 characterID )
+{
+	DBQueryResult res;
+	if(!sDatabase.RunQuery(res,
+		"SELECT itemID, contractID, quantity, flag, typeID, get"
+		" FROM contracts_items"
+		" WHERE characterID=%d", characterID ))
+	{
+		codelog(MARKET__ERROR, "Error in query: %s", res.error.c_str() );
+		return NULL;
+	}
+	return DBResultToIndexRowset( res, "contractID" );
+}
+
+PyRep *MarketDB::GetContractBids( uint32 contractID )
+{
+	DBQueryResult res;
+	bool success = false;
+
+	if(contractID == NULL)
+	{
+		success = sDatabase.RunQuery(res,"SELECT bidID, contractID, issuerID, quantity, issuerCorpID, issuerStationID, issuerSolarSystemID, issuerRegionID FROM contract_bids", contractID);
+	}else{
+		success = sDatabase.RunQuery(res,"SELECT bidID, contractID, issuerID, quantity, issuerCorpID, issuerStationID, issuerSolarSystemID, issuerRegionID FROM contract_bids WHERE contractID=%u", contractID);
+	}
+
+	if(!success)
+	{
+		codelog(MARKET__ERROR, "Error in query: %s", res.error.c_str() );
+		return NULL;
+	}
+
+	return DBResultToRowset( res );
+}
+
+PyRep *MarketDB::DeleteContract( uint32 contractID, uint32 characterID )
+{
+	DBerror err;
+
+	DBQueryResult res;
+
+	// Update the user info
+	int forCorp = false;
+	if(!sDatabase.RunQuery(res,
+		"SELECT forCorp"
+		" FROM contract"
+		" WHERE contractID=%d", contractID))
+	{
+		codelog(MARKET__ERROR, "Error in query: %s", res.error.c_str() );
+		return new PyBool(false);
+	}
+	DBResultRow row;
+
+	if( !res.GetRow(row) )
+	{
+		codelog(MARKET__ERROR, "Contract %d not found.", contractID);
+		return NULL;
+	}
+
+	forCorp = row.GetInt(0);
+
+	if(!sDatabase.RunQuery(err, 
+		"DELETE FROM contract"
+		" WHERE contractID=%d", contractID ) )
+	{
+		codelog(MARKET__ERROR, "Error in query: %s", err.c_str() );
+		return new PyBool(false);
+	}
+
+	if(!sDatabase.RunQuery(err,
+		"DELETE FROM contracts_items"
+		" WHERE contractID=%d", contractID ) )
+	{
+		codelog(MARKET__ERROR, "Error in query: %s", err.c_str() );
+		return new PyBool(false);
+	}
+
+	if(!sDatabase.RunQuery(err,
+		"DELETE FROM contract_bids"
+		" WHERE contractID=%d", contractID ) )
+	{
+		codelog(MARKET__ERROR, "Error in query: %s", err.c_str() );
+		return new PyBool(false);
+	}
+
+	if(!forCorp)
+	{
+		if(!sDatabase.RunQuery(err, 
+			"UPDATE"
+			" chrcontractinfo"
+			" SET numOutStandingContractsNonCorp=numOutStandingContractsNonCorp-1,"
+			" numOutstandingContracts=numOutstandingContracts-1"
+			" WHERE characterID=%d", characterID))
+		{
+			codelog(MARKET__ERROR, "Error in query: %s", err.c_str() );
+			return new PyBool(false);
+		}
+	}else{
+		if(!sDatabase.RunQuery(err, 
+			"UPDATE"
+			" chrcontractinfo"
+			" SET numOutStandingContractsForCorp=numOutStandingContractsForCorp-1,"
+			" numOutstandingContracts=numOutstandingContracts-1"
+			" WHERE characterID=%d", characterID))
+		{
+			codelog(MARKET__ERROR, "Error in query: %s", err.c_str() );
+			return new PyBool(false);
+		}
+	}
+	return new PyBool(true);
+}
+
+PyRep *MarketDB::AcceptContract( uint32 contractID, uint32 characterID, bool unknown )
+{
+	DBerror err;
+
+	if(unknown == true)return new PyBool(false);
+	if(!sDatabase.RunQuery(err,
+		"UPDATE"
+		" contract"
+		" SET isAccepted=1,"
+		" acceptorID=%d,"
+		" status=1"
+		" WHERE contractID=%d",characterID, contractID))
+	{
+		codelog(MARKET__ERROR, "Error in query: %s", err.c_str() );
+		return new PyBool(false);
+	}
+	return new PyBool(true);
+}
+
+PyRep *MarketDB::CompleteContract( uint32 contractID, uint32 characterID, uint32 unknown )
+{
+	DBerror err;
+
+	if(!sDatabase.RunQuery(err,
+		"UPDATE contract"
+		" SET status=%d,"
+		" acceptorID=%d"
+		" WHERE contractID=%d", unknown, characterID, contractID))
+	{
+		codelog(MARKET__ERROR, "Error in query: %s", err.c_str() );
+		return new PyBool(false);
+	}
+	return new PyBool(true);
 }

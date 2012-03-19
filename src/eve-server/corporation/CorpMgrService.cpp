@@ -34,6 +34,7 @@ CorpMgrService::CorpMgrService(PyServiceMgr *mgr)
 	_SetCallDispatcher(m_dispatch);
 
 	PyCallable_REG_CALL(CorpMgrService, GetPublicInfo)
+	PyCallable_REG_CALL(CorpMgrService, GetCorporationIDForCharacter)
 }
 
 CorpMgrService::~CorpMgrService() {
@@ -51,7 +52,18 @@ PyResult CorpMgrService::Handle_GetPublicInfo(PyCallArgs &call) {
 	return m_db.GetCorporation(corpID.arg);
 }
 
+PyResult CorpMgrService::Handle_GetCorporationIDForCharacter( PyCallArgs &call )
+{
+	Call_SingleIntegerArg arg;
+	if( !arg.Decode( &call.tuple ) )
+	{
+		codelog(SERVICE__ERROR, "Bad param");
+		return NULL;
+	}
+ 
+	return m_db.GetCorporationIDForCharacter( arg.arg );
 
+}
 
 
 

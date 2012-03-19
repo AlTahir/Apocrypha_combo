@@ -319,6 +319,7 @@ PyResult CharacterService::Handle_CreateCharacter2(PyCallArgs &call) {
 
     _log( CLIENT__MESSAGE, "Sending char create ID %u as reply", char_item->itemID() );
 
+	m_db.AddCharacterContractInfo( char_item->itemID() );
     return new PyInt( char_item->itemID() );
 }
 

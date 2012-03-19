@@ -1249,6 +1249,30 @@ bool CorporationDB::UpdateLogo(uint32 corpID, const Call_UpdateLogo & upd, PyDic
 
     return true;
 }
+
+PyRep *CorporationDB::GetCorporationIDForCharacter( uint32 characterID )
+{
+	DBQueryResult res;
+	if(!sDatabase.RunQuery(res, 
+		"SELECT"
+		" corporationID"
+		" FROM character_"
+		" WHERE characterID=%d", characterID))
+	{
+		codelog(DATABASE__ERROR, "Error in query: %s", res.error.c_str() );
+		return new PyInt( 0 );
+	}
+ 
+	DBResultRow row;
+	if( !res.GetRow( row ) )
+	{
+		codelog(DATABASE__ERROR, "Character %s not found.", characterID);
+		return new PyInt( 0 );
+	}
+ 
+	return new PyInt( row.GetInt(0) );
+}
+
 #undef NI
 
 

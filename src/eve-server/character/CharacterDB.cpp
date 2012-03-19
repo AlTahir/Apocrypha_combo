@@ -552,3 +552,42 @@ bool CharacterDB::del_name_validation_set( uint32 characterID )
 		return false;
 	}
 }
+
+bool CharacterDB::AddCharacterContractInfo( uint32 characterID )
+{
+	DBerror res;
+	if(!sDatabase.RunQuery(res,
+		"INSERT INTO chrcontractinfo ("
+		"characterID,"
+		" numOutstandingContractsNonCorp,"
+		" numOutstandingContractsForCorp,"
+		" numOutstandingContracts,"
+		" numContractsLeft,"
+		" numRequiresAttention,"
+		" numRequiresAttentionCorp,"
+		" numAssignedTo,"
+		" numAssignedToCorp,"
+		" numBiddingOn,"
+		" numInProgress,"
+		" numBiddingOnCorp,"
+		" numInProgressCorp"
+		") VALUES("
+		"%d,"
+		"0,"
+		"0,"
+		"0,"
+		"0,"
+		"0,"
+		"0,"
+		"0,"
+		"0,"
+		"0,"
+		"0,"
+		"0,"
+		"0)", characterID ))
+	{
+		codelog( SERVICE__ERROR, "Error in query for %s", res.c_str() );
+		return false;
+	}
+	return true;
+}

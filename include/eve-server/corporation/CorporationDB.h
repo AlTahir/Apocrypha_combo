@@ -86,6 +86,8 @@ public:
     bool UpdateCorporation(uint32 corpID, const Call_UpdateCorporation & upd, PyDict * notif);
     bool UpdateLogo(uint32 corpID, const Call_UpdateLogo & upd, PyDict * notif);
 
+	PyRep *GetCorporationIDForCharacter( uint32 characterID );
+	
 protected:
 };
 

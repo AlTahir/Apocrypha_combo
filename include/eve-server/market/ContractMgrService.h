@@ -32,8 +32,20 @@ class ContractMgrService : public PyService {
 public:
 	ContractMgrService(PyServiceMgr *mgr);
 	~ContractMgrService();
+	
+	MarketDB m_db;
 
 	PyCallable_DECL_CALL(NumRequiringAttention)
+	PyCallable_DECL_CALL(CollectMyPageInfo)
+	PyCallable_DECL_CALL(NumOutstandingContracts)
+	PyCallable_DECL_CALL(GetItemsInStation)
+	PyCallable_DECL_CALL(GetContractListForOwner)
+	PyCallable_DECL_CALL(GetContractList)
+	PyCallable_DECL_CALL(CreateContract)
+	PyCallable_DECL_CALL(GetContract)
+	PyCallable_DECL_CALL(DeleteContract)
+	PyCallable_DECL_CALL(AcceptContract)
+	PyCallable_DECL_CALL(CompleteContract)
 
 private:
 	class Dispatcher;

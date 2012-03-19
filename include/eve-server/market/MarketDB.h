@@ -74,6 +74,19 @@ public:
 	
 	bool BuildOldPriceHistory();
 	
+	uint32 GetPlayerNumberOutstandingContracts(uint32 characterID);
+	PyRep *GetPlayerItemsInStation( uint32 characterID, uint32 stationID );
+	PyRep *GetContractListForOwner( uint32 characterID, bool isAccepted, uint32 status, uint32 contractType, uint32 issuerCorpID );
+	PyRep *GetContractList(  );
+	PyRep *CollectMyPageInfo( uint32 clientID );
+	PyRep *CreateContract( uint32 characterID, uint32 characterCorpID, uint32 type, uint32 avail, uint32 assigneeID, uint32 expiretime, uint32 duration, uint32 startStationID, uint32 endStationID, uint32 startSolarSystemID, uint32 endSolarSystemID, uint32 startRegionID, uint32 endRegionID, uint32 price, uint32 reward, uint32 collateral, std::string title, std::string description/*, std::vector<int32> itemsID, std::vector<int32> quantity, uint32 flag, std::vector<int32> requestItemID, std::vector<int32> requestItemQuantity*/, bool forCorp );
+	PyRep *GetContract( uint32 contractID );
+	PyRep *GetContractItems( uint32 contractID );
+	PyRep *GetContractItemsForOwner( uint32 contractID );
+	PyRep *GetContractBids( uint32 contractID );
+	PyRep *DeleteContract( uint32 contractID, uint32 characterID );
+	PyRep *AcceptContract( uint32 contractID, uint32 characterID, bool unknown );
+	PyRep *CompleteContract( uint32 contractID, uint32 characterID, uint32 unknown );
 protected:
 	uint32 _StoreOrder(uint32 clientID, uint32 accountID, uint32 stationID, uint32 typeID, double price, uint32 quantity, uint8 orderRange, uint32 minVolume, uint8 duration, bool isCorp, bool isBuy);
 };

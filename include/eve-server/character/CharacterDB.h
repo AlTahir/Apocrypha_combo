@@ -115,6 +115,8 @@ public:
 	
 	uint32 AddOwnerNote(uint32 charID, const std::string &label, const std::string &content);
 	bool EditOwnerNote(uint32 charID, uint32 noteID, const std::string &label, const std::string &content);
+	
+	bool AddCharacterContractInfo( uint32 characterID );
 
 private:
 	/**
