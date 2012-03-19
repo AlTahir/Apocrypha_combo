@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/845/branches/experimental/include/eve-server/trade
+END
+TradeService.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/845/branches/experimental/include/eve-server/trade/TradeService.h
+END
+TradeDB.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/845/branches/experimental/include/eve-server/trade/TradeDB.h
+END

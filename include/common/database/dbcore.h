@@ -75,7 +75,6 @@ public:
     DBTYPE ColumnType( uint32 index ) const;
 
     inline bool IsUnsigned( uint32 index ) const;
-    inline bool IsBinary( uint32 index ) const;
 
 protected:
     //for DBcore:
@@ -112,7 +111,6 @@ public:
     uint32 ColumnLength( uint32 index ) const;
 
     bool IsUnsigned( uint32 index ) const { return mResult->IsUnsigned( index ); }
-    bool IsBinary( uint32 index ) const { return mResult->IsBinary( index ); }
 
 protected:
     //for DBQueryResult
