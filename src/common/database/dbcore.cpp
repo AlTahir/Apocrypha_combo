@@ -498,7 +498,7 @@ DBTYPE DBQueryResult::ColumnType( uint32 index ) const
 
 bool DBQueryResult::IsUnsigned( uint32 index ) const
 {
-    return ( mFields[ index ]->flags & UNSIGNED_FLAG );
+    return (mFields[index]->flags & UNSIGNED_FLAG) != 0;
 }
 
 bool DBQueryResult::IsBinary( uint32 index ) const

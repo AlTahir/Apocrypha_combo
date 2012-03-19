@@ -16,9 +16,9 @@ COMMAND( goto, ROLE_ADMIN,
          "(x) (y) (z) - Jump to the specified position in space. Stopped." )
 COMMAND( spawn, ROLE_ADMIN,
          "(typeID) - Spawn an NPC with the specified type." )
-COMMAND( location, ROLE_ADMIN,
+COMMAND( location, ROLE_PLAYER,
          "- Gives you back your current location in space." )
-COMMAND( syncloc, ROLE_ADMIN,
+COMMAND( syncloc, ROLE_PLAYER,
          "- Synchonizes your location in client with location on server." )
 COMMAND( setbpattr, ROLE_ADMIN,
          "(itemID) (copy) (materialLevel) (productivityLevel) (licensedProductionRunsRemaining) - Change blueprint's attributes." )
